@@ -16,7 +16,7 @@ function binaryToHexadecimal(blob) {
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
   // blob = parseInt(blob.substring(2), 16)
-  return '0b' + parseInt(blob.substring(2), 16).toString(2)
+  return '0b' + parseInt(blob).toString(2)
 }
 
 /* Base 10 to ASCII */
