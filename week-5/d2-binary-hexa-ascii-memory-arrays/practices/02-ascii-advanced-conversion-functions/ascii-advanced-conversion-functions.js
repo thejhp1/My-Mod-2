@@ -27,13 +27,15 @@ function decimalToAscii(blob) {
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
   // blob = parseInt(blob.substring(2), 2)
-  return String.fromCharCode(parseInt(blob.substring(2), 2))
+  // return String.fromCharCode(parseInt(blob.substring(2), 2))
+  return String.fromCharCode(blob)
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
   // blob = parseInt(blob.substring(2), 16)
-  return String.fromCharCode(parseInt(blob))
+  // return String.fromCharCode(parseInt(blob))
+  return String.fromCharCode(blob)
 }
 
 /* ASCII to base 10 */
