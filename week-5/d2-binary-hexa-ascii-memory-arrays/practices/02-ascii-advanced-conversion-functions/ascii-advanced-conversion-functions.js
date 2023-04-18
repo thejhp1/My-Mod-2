@@ -40,11 +40,13 @@ function hexadecimalToAscii(blob) {
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
-  let res = []
-  for (let ele of blob.split('')){
-    res.push(ele.charCodeAt())
-  }
-  return res
+  // let res = []
+  // for (let ele of blob){
+  //   res.push(ele.charCodeAt())
+  // }
+  // return res
+
+  return blob.split('').map(char => char.charCodeAt());
 }
 
 // console.log('Binary to hexadecimal:')
