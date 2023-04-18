@@ -33,7 +33,7 @@ function binaryToAscii(blob) {
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
   // blob = parseInt(blob.substring(2), 16)
-  return String.fromCharCode(parseInt(blob.substring(2), 16))
+  return String.fromCharCode(parseInt(blob))
 }
 
 /* ASCII to base 10 */
