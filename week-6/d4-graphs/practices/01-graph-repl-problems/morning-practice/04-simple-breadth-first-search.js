@@ -4,22 +4,22 @@ const adjList = {
   3: [2, 4],
   4: [3, 5],
   5: [1, 2, 4],
-  6: []
-}
+  6: [],
+};
 
 function breadthFirstSearch(start, end) {
-  const queue = [start]
+  const queue = [start];
   const visited = new Set([start]);
 
   while (queue.length) {
-      const curr = queue.shift();
-      if (curr === end) return true;
-      adjList[curr].forEach(neighbor => {
-          if (!visited.has(neighbor)) {
-              queue.push(neighbor);
-              visited.add(neighbor);
-          }
-      });
+    const curr = queue.shift();
+    if (curr === end) return true;
+    adjList[curr].forEach((neighbor) => {
+      if (!visited.has(neighbor)) {S
+        queue.push(neighbor);
+        visited.add(neighbor);
+      }
+    });
   }
   // if (visited.has(end)) return true
   return false;
