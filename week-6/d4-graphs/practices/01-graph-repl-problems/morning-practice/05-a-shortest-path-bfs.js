@@ -8,17 +8,17 @@ const adjList = {
 };
 
 function aShortestPath(start, end) {
-  const queue = [[start]];
-  const visited = new Set([start]);
+  const queue = [[start]]; // => [[1,5], [1,2,3]]
+  const visited = new Set([start]); // => [1, 2, 5, 3]
 
   while (queue.length) {
-    const currPath = queue.shift();
-    const currNode = currPath[currPath.length - 1];
-    if (currNode === end) return currPath;
+    const currPath = queue.shift(); // => [1,2]
+    const currNode = currPath[currPath.length - 1]; // => 2
+    if (currNode === end) return currPath; // if 2 === 3
     adjList[currNode].forEach((neighbor) => {
       if (!visited.has(neighbor)) {
-        queue.push([...currPath, neighbor]);
-        visited.add(neighbor);
+        queue.push([...currPath, neighbor]); // => [1,2,3]
+        visited.add(neighbor); // => 3
       }
     });
   }
